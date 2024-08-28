@@ -10,4 +10,10 @@ public static class ServiceExtensions
             .WithMethods("GET", "POST")
             .WithHeaders("accept", "content-type"));
         });
+
+    public static void ConfigureIISIntegration(this IServiceCollection services) =>
+        services.Configure<IISOptions>(options =>
+        {
+
+        });
 }
